@@ -6,10 +6,13 @@ const Carts = ({carts ,setcarts}) => {
         const filtercart =carts.filter(cart=> cart.id !== id)
         setcarts(filtercart)
     }
-
+    const handelpayment =()=>{
+        setcarts([])
+    }
     if(carts.length ===0){
         return
     }
+    
     return (
         <div className="container mx-auto p-7 space-y-4 border border-gray-200 rounded-lg">
             <h1 className="text-2xl font-semibold ">Your Cart</h1>
@@ -30,7 +33,7 @@ const Carts = ({carts ,setcarts}) => {
                 
 
             </div>
-            <div className="btn w-full bg-amber-500 shadow-sm rounded-full text-white text-xl">Proceed To Checkout</div>
+            <div onClick={handelpayment} className="btn w-full bg-amber-500 shadow-sm rounded-full text-white text-xl">Proceed To Checkout</div>
         </div>
     );
 };

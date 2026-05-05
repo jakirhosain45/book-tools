@@ -24,9 +24,9 @@ const Toolscart = ({ carts, setcarts }) => {
   const isIncart = (id) => carts.find((cart) => cart.id == id);
 
   return (
-    <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 justify-center gap-6">
+    <div className="container mx-auto grid lg:grid-cols-3 md:grid-cols-2 justify-center gap-5 px-2">
       {tools.map((tool) => (
-        <div key={tool.id} className="card w-96 bg-base-200 shadow-sm ">
+        <div key={tool.id} className="card w-full bg-base-200 shadow-sm hover:shadow-amber-50 hover:bg-amber-50 hover-3d">
           <div className="card-body">
             <span className={`badge badge-xs ${tagColor(tool.tagtype)} p-3 text-xl`}>
               {tool.tag}
@@ -52,7 +52,7 @@ const Toolscart = ({ carts, setcarts }) => {
               <button
                 disabled={isIncart(tool.id)}
                 onClick={() => addtocart(tool)}
-                className="btn btn-primary btn-block"
+                className="btn btn-warning btn-block text-black"
               >
                 Buy Now
               </button>

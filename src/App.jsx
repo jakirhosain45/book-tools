@@ -5,6 +5,7 @@ import AllTools from './components/AllTools'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import { Toaster } from 'react-hot-toast'
+import Footer from './components/Footer'
 
 function App() {
   const [carts,setcarts] =useState([])
@@ -14,6 +15,7 @@ function App() {
       <Banner/>
       <AllTools carts={carts} setcarts={setcarts}/>
       <Toaster></Toaster>
+      <Footer></Footer>
     </div>
   )
 }

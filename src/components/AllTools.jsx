@@ -29,7 +29,7 @@ const AllTools = ({carts,setcarts}) => {
             type="radio"
             name="my_tabs_1"
             className="tab rounded-full w-40 font-bold "
-            aria-label="Cart"
+            aria-label={`Cart (${carts.length})`}
             onClick={()=>setactivetab("cart")}
             
           />
